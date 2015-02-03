@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"     "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+<title>Sudoku</title>
+<meta name="author" content="Camellia (Lu Yang)">
+<link rel="stylesheet" type="text/css" href="css/sudoku.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("body").append("<div id='main_bg'>");
+        $("#main_bg").append("<img src='images/bg.jpg' id='bg' />");
+        cover();
+        $(window).resize(function(){//window resize
+            cover();
+        });
+    });
+    function cover(){
+        var win_width=$(window).width();
+        var win_height=$(window).height();
+        $("#bg").attr({width:win_width,height:win_height});
+    }
+</script>
+</head>
+<body >
+<section data-role="page" id="gameScreen">
+<div date-role="content">
+  <div id="main_bg"> <img src="images/bg.png" id="bg" width=100% height=100%>
+  <script type="text/javascript" src="js/Sudoku.js"></script>
+   </div>
+</div>
+</section>
+</body>
+</html>
